@@ -96,8 +96,5 @@ cp .env.example .env
    ```
 ![LOGIN](https://i.imgur.com/jFTqag7.png)
 
-Всё готово — теперь вы можете запускать и тестировать все методы API в один клик через Insomnia!
-EOF
-
 ## Автор
 whethally
