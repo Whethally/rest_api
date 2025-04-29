@@ -1,0 +1,553 @@
+type: collection.insomnia.rest/5.0
+name: REST_API
+meta:
+  id: wrk_34bfc8ec321e4a3e965a9a0ce7e2095c
+  created: 1744223955273
+  modified: 1744227064460
+collection:
+  - name: Comment
+    meta:
+      id: fld_51ad448abf6c40bf9a8fbcb5b374654f
+      created: 1744226210287
+      modified: 1744226210287
+      sortKey: -1744226210287
+    children:
+      - url: "{{base_url}}posts/34/comments"
+        name: Post Comment
+        meta:
+          id: req_83840964f9664d52b28a1f5bdfac2534
+          created: 1744224613657
+          modified: 1745911330135
+          isPrivate: false
+          sortKey: -1744226218691
+        method: POST
+        body:
+          mimeType: multipart/form-data
+        parameters:
+          - id: pair_4652ecf3c94749558b0d89d21e7e90f6
+            name: content
+            value: Best Post!
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}posts/34/comments"
+        name: Get Comment
+        meta:
+          id: req_419ea7f088ce4c4ea1454416af3c6461
+          created: 1744224777613
+          modified: 1745911323533
+          isPrivate: false
+          sortKey: -1744226218591
+        method: GET
+        body:
+          mimeType: multipart/form-data
+        parameters:
+          - id: pair_9eca81b512704981ae339358d2fd48c9
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_fc3a1436af584fcb86fa2c1c9e33c61c
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: User
+    meta:
+      id: fld_361bd4ca095349e797fb6b5960b46916
+      created: 1744226230120
+      modified: 1744226230120
+      sortKey: -1744226230120
+    children:
+      - url: "{{base_url}}user"
+        name: Get User Data
+        meta:
+          id: req_3c3b444e5c6f4a96b6f9c3350d51db64
+          created: 1744224396041
+          modified: 1745911317943
+          isPrivate: false
+          sortKey: -1744226236457
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_82702f50d37f428ab176db52fc70180c
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}user/comments"
+        name: Get User Comments
+        meta:
+          id: req_37f446ec8f4e4feca472850df1371377
+          created: 1744226078797
+          modified: 1745911392669
+          isPrivate: false
+          sortKey: -1744226236557
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_82702f50d37f428ab176db52fc70180c
+        authentication:
+          type: bearer
+          disabled: false
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Auth
+    meta:
+      id: fld_4b6acc4a4b6e42cc862c29442b4e65a9
+      created: 1744226261160
+      modified: 1744226261160
+      sortKey: -1744226261160
+    children:
+      - url: "{{base_url}}register"
+        name: Register
+        meta:
+          id: req_58d1845d9207419db02d3b65853c24ef
+          created: 1744223957867
+          modified: 1745911343895
+          isPrivate: false
+          sortKey: -1744226264557
+        method: POST
+        body:
+          mimeType: multipart/form-data
+        parameters:
+          - id: pair_3628c79063364bb4808bac2ca1b7b7e7
+            name: email
+            value: test2@test.ru
+            disabled: false
+          - id: pair_9c27bb1e0fba49d08082331d9996fb43
+            name: password
+            value: "1234567"
+            disabled: false
+          - id: pair_fbd967d111e34365b9929f069937faaf
+            name: name
+            value: Test_Name
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+            id: pair_a23543841fed4a398b5fed51a5d5a0e7
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}login"
+        name: Login
+        meta:
+          id: req_f7f6deec8e2e43909f943f854693be99
+          created: 1744224203724
+          modified: 1745911250500
+          isPrivate: false
+          sortKey: -1744226264457
+        method: POST
+        body:
+          mimeType: multipart/form-data
+        parameters:
+          - id: pair_0e197a0475654976bfbd661e99c8ccfe
+            name: email
+            value: test1@test.ru
+            disabled: false
+          - id: pair_cc44fa1ed2884de593680b8a5583b287
+            name: password
+            value: "123456"
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Posts
+    meta:
+      id: fld_67d2dc87ce914c17bb869185ca4aedc4
+      created: 1744226274544
+      modified: 1744226451548
+      sortKey: -1744226274544
+    children:
+      - url: "{{base_url}}posts"
+        name: Create Post
+        meta:
+          id: req_5eed1b5d25e848bbb5dacbbf21cc4873
+          created: 1744226278486
+          modified: 1745911356592
+          isPrivate: false
+          sortKey: -1744226278486
+        method: POST
+        body:
+          mimeType: multipart/form-data
+        parameters:
+          - id: pair_10a2582d77c042e1946d6a976a3d9f70
+            name: title
+            value: Проверка заголовка
+            disabled: false
+          - id: pair_e40baee1d81d4652b0a3e2d89d6f6375
+            name: content
+            value: Проверка контента
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}posts"
+        name: Show Post
+        meta:
+          id: req_799b3964ba7f4bfda869011526930908
+          created: 1744226410285
+          modified: 1745911349939
+          isPrivate: false
+          sortKey: -1744226271521.5
+        method: GET
+        body:
+          mimeType: multipart/form-data
+        parameters:
+          - id: pair_9e6a8e5aca184dd8a9bbd0413e57e3cb
+            name: page
+            value: "1"
+            disabled: false
+          - id: pair_0b0d70aa07584ba98fa9b0a3cd4928b3
+            name: author_id
+            value: "13"
+            disabled: false
+          - id: pair_03d4f2ec9e5a46229fffe8ca68aad3c7
+            name: date
+            value: 2025-04-11
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}posts/34"
+        name: Update Post
+        meta:
+          id: req_80a64443a2d14b4fba55538df82d2c0f
+          created: 1744288750018
+          modified: 1745911353448
+          isPrivate: false
+          sortKey: -1744226275003.75
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+        parameters:
+          - id: pair_10a2582d77c042e1946d6a976a3d9f70
+            name: title
+            value: Обновить Заголовок
+            disabled: false
+          - id: pair_e40baee1d81d4652b0a3e2d89d6f6375
+            name: content
+            value: Обновить Контент
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Debug
+    meta:
+      id: fld_3a1c86d6544e4960820094285111cfb8
+      created: 1744244715273
+      modified: 1744244715273
+      sortKey: -1744244715273
+    children:
+      - url: "{{base_url}}token-debug"
+        name: Token Debug
+        meta:
+          id: req_1afe913508d24241a50a9ca4cc4f8a15
+          created: 1744244717610
+          modified: 1745911360448
+          isPrivate: false
+          sortKey: -1744244717610
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Roles
+    meta:
+      id: fld_114db0e6b0944e4cac3378b608beda1d
+      created: 1744297535129
+      modified: 1744297535129
+      sortKey: -1744297535129
+    children:
+      - url: "{{base_url}}roles"
+        name: Get Roles
+        meta:
+          id: req_95d0b672264347fba99d1465bf23972e
+          created: 1744297548680
+          modified: 1745911372878
+          isPrivate: false
+          sortKey: -1744297548680
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}roles"
+        name: Add Role
+        meta:
+          id: req_01adcda38aed420fa57c3cc78696f9f8
+          created: 1744299085156
+          modified: 1745911369254
+          isPrivate: false
+          sortKey: -1744271133145
+        method: POST
+        parameters:
+          - id: pair_afac81f23f7842829f3ee5efacaeb393
+            name: name
+            value: test2
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}permissions"
+        name: Assign Role Permissions
+        meta:
+          id: req_b52ab7e028284011bc4461dea803db70
+          created: 1744299137427
+          modified: 1745911363958
+          isPrivate: false
+          sortKey: -1744257925377.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"permissions": []
+            }
+        parameters:
+          - id: pair_2569452a6eec4b3a842c2446f84599d4
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Permissions
+    meta:
+      id: fld_19f306003ee1453ebafef2808af64fd6
+      created: 1744297541617
+      modified: 1744297541617
+      sortKey: -1744297541617
+    children:
+      - url: "{{base_url}}permissions"
+        name: Get Permissions
+        meta:
+          id: req_26cace1aab104cbba5edbb017deb9892
+          created: 1744299202264
+          modified: 1745911383793
+          isPrivate: false
+          sortKey: -1744299204290
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}permissions"
+        name: Add Permission
+        meta:
+          id: req_4b5a377f20e54112ac6a17bad9d7b5f1
+          created: 1744299756636
+          modified: 1745911377090
+          isPrivate: false
+          sortKey: -1744298376485
+        method: POST
+        parameters:
+          - id: pair_a94b1cb26dbc4af6ba22f916d741daea
+            name: name
+            value: TEST
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{{token}}"
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6d0b8fba9b9821e3a83de50e00e36d77760f1a4f
+    created: 1744223955276
+    modified: 1744300008770
+  cookies:
+    - key: XSRF-TOKEN
+      value: eyJpdiI6ImNBWEtUSFhuYjh2d1NaVEFoNDRHZXc9PSIsInZhbHVlIjoiNDBEcHhsT0RKQzF6K0VaUitKS29JZkpSem5pMm1IU3NrcmIxbVhiYlBNVDNwdlRSUmNldW81OVNTQUNQNE93eTFERVFDM05Felo1bUhzcU56dVJWUnNUZXpFMU54K1NwQWIveW02cGxZd1NLVnVrUllOQ2NCWFdRT25PVVArWGciLCJtYWMiOiJhYTVkMzJkMmY3OWFiZGZlYzc2NDkxYjVhM2NmYzgwOGVjMDhjOTIyNzg4OTYzNDJmOWRhNWJmMjM2YzU5MzhkIiwidGFnIjoiIn0%3D
+      maxAge: 7200
+      domain: localhost
+      path: /
+      hostOnly: true
+      creation: 2025-04-10T15:33:46.032Z
+      lastAccessed: 2025-04-10T15:46:48.770Z
+      sameSite: lax
+      id: 91c72ceb-5589-407c-aca1-323cdbbaff71
+    - key: laravel_session
+      value: eyJpdiI6Ik8vaHdBZnd4S3ZxdHZKYWREY3c0Z3c9PSIsInZhbHVlIjoibVRCYThhUUoyUHlkNjlPUWIwQmhKdWJXZWMxaE5pSU1ob2lUWEEvK2lpQ0p3Vis5SGJoTUU3K1BIbExCZnpCdEpOcGROR0dxRmZ5cnltUituejFxUkp6aVhSNDE3aXBiM0Q1VWVaMnk2bXBUY3d6YXlWWTZYVWNBYnArYkhRRlYiLCJtYWMiOiJmYjg0OTQ5NzgzZWYwOTVhNGQ0Y2M0NGM4MzQzOGZmNmIzNjg2YzljN2NjZWJkN2UxMmY5ZTlmZTI1MzExNWIwIiwidGFnIjoiIn0%3D
+      maxAge: 7200
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-04-10T15:33:46.034Z
+      lastAccessed: 2025-04-10T15:46:48.770Z
+      sameSite: lax
+      id: fe6741e6-41b5-4b9a-9dfd-289c8ef9ea00
+environments:
+  name: Base Environment
+  meta:
+    id: env_6d0b8fba9b9821e3a83de50e00e36d77760f1a4f
+    created: 1744223955276
+    modified: 1745911308807
+    isPrivate: false
+  data:
+    token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS9sb2dpbiIsImlhdCI6MTc0NTkxMDg5NCwiZXhwIjoxNzQ1OTE0NDk0LCJuYmYiOjE3NDU5MTA4OTQsImp0aSI6Im85eDRpSEJaU0xqQWpMdUwiLCJzdWIiOiIxNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ._AlknK3hHhOqcQ06AcCI-pF_EiVET5D4vOux_fbJgZw
+    base_url: http://localhost/api/
